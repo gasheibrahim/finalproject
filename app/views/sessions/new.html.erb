@@ -1,0 +1,30 @@
+<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 py-5 text-white text-center" style="background-color: #1b2a49;">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">LogIn</h2>
+                        <p>Please LogIn Here In Order To Shop On Our Shop, Enjoy!!!!!!
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border" style="background-color: #00909e; border-radius: 2rem;">
+                <h4 class="pb-4">Please LogIn Here!!!</h4>
+                        <div class="form-group col-md-12">
+                            <%= f.email_field :email, id:"inputEmail",class:"form-control", placeholder:"Email address" %>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <%= f.password_field :password, id:"inputPassword", class:"form-control", placeholder:"Password" %>
+                        </div>
+                    <div class="form-row">
+                        <%= f.submit "Log in", class:"btn btn-primary" %>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<% end %>

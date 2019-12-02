@@ -1,0 +1,174 @@
+<link rel="stylesheet" href="products.css">
+
+<div class="card" style="background-color: #c9d1d3;">
+<p id="notice"><%= notice %></p>
+<div class="card-body">
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="view">
+        <%= image_tag("let-me-just-drown-in-this-music.jpg", class:"d-block w-100", alt:"let-me-just-drown-in-this-music") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">let-me-just-drown-in-this-music</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("this-music-is-amazing.jpg", class:"d-block w-100", alt:"this-music-is-amazing") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">this-music-is-amazing</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("running-with-his-favourite-music.jpg", class:"d-block w-100", alt:"this-music-is-amazing") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">running-with-his-favourite-music</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("music-takes-me-away.jpg", class:"d-block w-100", alt:"music-takes-me-away") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">music-takes-me-away</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("young-woman-sitting-on-the-table-and-listening-music-in-headphones.jpg", class:"d-block w-100", alt:"young-woman-sitting-on-the-table-and-listening-music-in-headphones") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">young-woman-sitting-on-the-table-and-listening-music-in-headphones</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("cause-what-workout-itd-be-without-music.jpg", class:"d-block w-100", alt:"cause-what-workout-itd-be-without-music") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">cause-what-workout-itd-be-without-music</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("confused-young-plus-size-model-listening-to-music-on-the-laptop.jpg", class:"d-block w-100", alt:"confused-young-plus-size-model-listening-to-music-on-the-laptop") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">confused-young-plus-size-model-listening-to-music-on-the-laptop</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <!--Mask color-->
+      <div class="view">
+        <%= image_tag("i-start-my-day-with-music-and-dance.jpg", class:"d-block w-100", alt:"i-start-my-day-with-music-and-dance") %>
+        <div class="mask rgba-black-light"></div>
+      </div>
+      <div class="carousel-caption">
+        <h3 class="h3-responsive">i-start-my-day-with-music-and-dance</h3>
+      </div>
+    </div>
+  </div>
+  <!--/.Slides-->
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+<h3 style="text-align: center;">New Product</h3>
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Product name</th>
+      <th>Product image</th>
+      <th>Product details</th>
+      <th>Product price</th>
+      <th>Product category</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.product_name %></td>
+        <td></td>
+        <td><%= product.product_details %></td>
+        <td><%= product.product_price %></td>
+        <td><%= product.product_category %></td>
+        <td><%= product.user %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'New Product', new_product_path %> -->
+<br>
+  <div class="container-fluid">
+    <div class="row">
+          <% @products.each do |product| %>
+          <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <%= image_tag product.image.url %>
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font"><%= product.product_name %></h6>
+                <p class="clrd-font product_price"> <i class="fa fa-usd clrd-font" aria-hidden="true"></i><%= product.product_price %></p>
+                <% if logged_in? %>
+                <%= link_to 'Buy', product, class:"btn btn-primary" %><br><br>
+                <% else %>
+                <%= link_to 'LogIn First', new_user_path, class:"btn btn-primary" %><br><br>
+                <% end %>
+              </div>
+          </div>
+          <% end %>
+    </div>
+  </div>
+  <%= paginate @products %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+  </script>
+</div>
+</div>

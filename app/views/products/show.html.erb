@@ -1,0 +1,46 @@
+<div class="card" style="background-color: #00909e;">
+<div class="card-body">
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-4">
+    <%= image_tag @product.image.url, class:"upload" %>
+  </div>
+  <div class="col-md-8">
+    <p class="card-text">
+      <strong>Product name:</strong>
+      <%= @product.product_name %>
+    </p>
+    <p class="card-text">
+      <strong>Product details:</strong>
+      <%= @product.product_details %>
+    </p>
+    <p class="card-text">
+    <strong>Product price:</strong>
+      <%= @product.product_price %>
+    </p>
+    <p class="card-text">
+      <strong>Product category:</strong>
+      <%= @product.product_category %>
+    </p>
+    <p class="card-text">
+      <strong>User:</strong>
+      <%= @product.user.fullname %>
+    </p>
+    <%= form_tag charges_path do %>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="EmusicStore"
+              data-amount="500"
+              data-label="Buy Now"
+              data-locale="auto"></script>
+    <% end %>
+    <%= button_to 'Add to cart', lineitems_path(product_id: @product), class:'btn btn-primary' %>
+  </div>
+</div>
+</div>
+</div>

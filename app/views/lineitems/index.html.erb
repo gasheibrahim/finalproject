@@ -1,0 +1,27 @@
+<div class="columns align-items-center">
+  <div class="column is-1">
+    <%= lineitem.quantity %>
+  </div>
+  <div class="column is-2">
+    <figure class="is-128x128 image">
+      <%= image_tag(lineitem.product.image_url) %>
+    </figure>
+  </div>
+  <div class="column is-9">
+    <strong><%= lineitem.product.product_name %></strong>
+    <div class="columns align-items-center">
+      <div class="content column is-9">
+        <%= truncate(lineitem.product.product_details, length: 140) %>
+      </div>
+      <div class="column is-3 has-text-right">
+        <strong class="f4"><%= number_to_currency(lineitem.total_price) %></strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="has-text-right">
+  <%= link_to 'Remove Item', lineitem, method: :delete, data: { confirm: "Are you sure? " }, class: "button is-small mb4" %>
+</div>
+
+<hr/ >
