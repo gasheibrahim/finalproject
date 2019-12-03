@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
     @products = if params[:search]
     Product.where('product_name LIKE ? or product_category LIKE ?', "%#{params[:search]}%","%#{params[:search]}%").page params[:page]
     else
-    @products = Product.order_list(params[:sort_by]).page params[:page]
+     @products = Product.order_list(params[:sort_by]).page params[:page]
+    end
   end
   def search
    @product =product.search(params[:search])
