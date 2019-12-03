@@ -1,4 +1,5 @@
-<!-- <div class="card" style="background-color:#c9d1d3;">
+<center>
+<div class="card" style="background-color:#c9d1d3;">
 <p id="notice"><%= notice %></p>
 <div class="card-header text-center">
     Users List
@@ -22,18 +23,12 @@
         <td><%= user.fullname %></td>
         <td><%= user.email %></td>
         <td><%= user.phonenumber %></td>
-        <td><%= user.password_digest %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= render 'follow_form', user: user, class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New User', new_user_path %>
 </div>
 </div>
- -->
+</center>

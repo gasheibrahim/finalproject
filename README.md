@@ -16,10 +16,8 @@
   * User registration
     * Name, email address, phone number and password are required
   * Admin Function
-  * Profile editing function
- * Profile image can be set as an icon
   * Product List Function
- * Following Users + My Product List (Home)
+ * Following products + My Product List (Home)
  * Product list of all users (Discover)
  * Favorite Product List (Collection)
  * Posting Function

@@ -26,6 +26,11 @@
       <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
       <% end %>
+      <% if current_user.try(:admin?) %>
+      <li class="nav-item">
+        <%= link_to "Administration", rails_admin_path %>
+      </li>
+      <% end %>
       <% if logged_in? %>
       <li class="nav-item">
         <%= link_to "Our Products", products_path, class:"nav-link", style:"color:white;" %>
@@ -34,14 +39,14 @@
         <%= link_to "Profile", user_path(current_user.id), class:"nav-link", style:"color:white;" %>
       </li>
       <li class="nav-item">
+        <%= link_to 'User list', users_path, class:"nav-link", style:"color:white;" %>
+      </li>
+      <li class="nav-item">
         <%= link_to "Logout", session_path(current_user.id), method: :delete, class:"nav-link", style:"color:white;" %>
       </li>
       <% else %>
       <li class="nav-item">
         <%= link_to 'Home', products_path,class:"nav-link", style:"color:#fff" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'AboutUs', products_path,class:"nav-link", style:"color:#fff" %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #fff;">
@@ -74,9 +79,6 @@
           <a class="dropdown-item" href="#">French horn</a>
           <a class="dropdown-item" href="#">Tuba</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Contact Us', products_path, class:"nav-link", style:"color:#fff" %>
       </li>
       <li class="nav-item">
         <%= link_to 'Register', new_user_path, class:"nav-link",style:"color:#fff" %>

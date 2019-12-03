@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :lineitems
   resources :sessions
+  resources :relationships, only: [:create, :destroy]
   resources :charges
   resources :carts
   resources :payments

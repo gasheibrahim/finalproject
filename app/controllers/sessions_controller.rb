@@ -5,11 +5,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      if user.admin?
-        redirect_to rails_admin.dashboard_path
-      else
-        redirect_to products_path(user.id)
-      end
+      redirect_to products_path(user.id)
     else
       flash.now[:danger] = 'Login failed'
       render 'new'
@@ -21,3 +17,4 @@ class SessionsController < ApplicationController
     redirect_to new_session_path
   end
 end
+ 

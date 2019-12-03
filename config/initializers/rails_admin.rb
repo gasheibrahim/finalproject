@@ -12,9 +12,11 @@ RailsAdmin.config do |config|
     end
   end
   ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
+   config.authenticate_with do
+     warden.authenticate! scope: :user
+     I18n.default_locale = :ja
+     I18n.locale = params[:locale] || I18n.default_locale
+   end
   # config.current_user_method(&:current_user)
 
   ## == CancanCan ==

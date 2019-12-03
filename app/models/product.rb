@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   mount_uploader :image, ImageUploader
   has_many :comments
   belongs_to :user
+  
   has_many :lineitems
   validates :product_name, presence: true
   validates :image, presence: true
