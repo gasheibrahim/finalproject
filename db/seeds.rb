@@ -23,3 +23,165 @@ User.create!(
  password_confirmation: "1234567890"
  #watched_on: 5.days.ago
 )
+User.create!(
+ fullname: "kamikazi",
+ email: "kamikazi@gmail.com",
+ phonenumber: "0784434343",
+ admin: "true",
+ password: "kamikazi",
+ password_confirmation: "kamikazi"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "jimmy",
+ email: "gashemajimmy@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "gatete",
+ email: "gatete@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "hhh",
+ email: "hhh@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "nnn",
+ email: "nnn@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "mmmm",
+ email: "mmmm@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "kkkk",
+ email: "kkkk@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "qqqqq",
+ email: "qqqqq@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "oooo",
+ email: "oooo@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "iiii",
+ email: "iiii@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "wwww",
+ email: "wwww@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "uuuu",
+ email: "uuuu@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "sssss",
+ email: "sssss@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "hhhh",
+ email: "hhhh@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "tttt",
+ email: "tttt@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "aaaaa",
+ email: "aaaaa@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "qqqqqqqqqq",
+ email: "qqqqqqqqqq@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
+User.create!(
+ fullname: "blaise",
+ email: "blaise@gmail.com",
+ phonenumber: "078845948",
+ admin: "true",
+ password: "1234567890",
+ password_confirmation: "1234567890"
+ #watched_on: 5.days.ago
+)
