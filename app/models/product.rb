@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  paginates_per 8
+  paginates_per 4
   before_destroy :not_referenced_by_any_lineitem
   mount_uploader :image, ImageUploader
   belongs_to :user
