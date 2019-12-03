@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
   def show
+    @comments = Comment.where(product_id: @product)
   end
   def new
     @product = Product.new

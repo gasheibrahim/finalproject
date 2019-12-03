@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   paginates_per 4
   before_destroy :not_referenced_by_any_lineitem
   mount_uploader :image, ImageUploader
+  has_many :comments
   belongs_to :user
   has_many :lineitems
   validates :product_name, presence: true

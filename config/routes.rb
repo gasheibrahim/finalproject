@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   resources :sessions
   resources :charges
   resources :carts
-  resources :comments
   resources :payments
-  resources :products
+  resources :products do 
+  resources :comments
+end
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

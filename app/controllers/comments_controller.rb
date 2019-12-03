@@ -1,39 +1,33 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
-  def index
-    @comments = Comment.all
+ before_action :find_product
+ before_action :find_comment, only: [:destroy, :edit , :update]
+def create
+@comment = @product.comments.create(params[:comment].permit(:description))
+@comment.save
+if @comment.save
+  redirect_to product_path(@product)
+else
+  render 'new'
+end
+end
+def destroy
+@comment.destroy
+redirect_to product_path(@product)
+end
+def edit
+end
+def update
+if @comment.update(params[:comment].permit(:description))
+  redirect_to product_path(@product)
+  else
+    render 'edit'
   end
-  def show
-  end
-  def new
-    @comment = Comment.new
-  end
-  def edit
-  end
-  def create
-    @comment = Comment.new(comment_params)
-    if @comment.save
-      redirect_to @comment, notice: 'Comment was successfully created.'
-    else
-      render :new 
-    end
-  end
-  def update
-    if @comment.update(comment_params)
-      redirect_to @comment, notice: 'Comment was successfully updated.'
-    else
-      render :edit
-    end
-  end
-  def destroy
-    @comment.destroy
-    redirect_to comments_url, notice: 'Comment was successfully destroyed.'
-  end
-  private
-    def set_comment
-      @comment = Comment.find(params[:id])
-    end
-    def comment_params
-      params.require(:comment).permit(:name, :description, :user_id)
-    end
+end
+private
+def find_product
+  @product = Product.find(params[:product_id])
+end
+def find_comment
+  @comment = @product.comments.find(params[:id])
+end
 end

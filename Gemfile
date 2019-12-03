@@ -66,3 +66,4 @@ gem 'mini_magick'
 gem 'rails_admin'
 gem 'stripe'
 gem 'kaminari'
+gem 'rails_12factor', group: :production

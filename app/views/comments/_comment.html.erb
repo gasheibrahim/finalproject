@@ -1,0 +1,14 @@
+<ul>
+  <% @comments.each do |comment| %>
+    <% if comment.id.present? %>
+      <li>
+        <p><br><%= comment.description %><br>
+        <% if logged_in? %>
+        <%= link_to "delete", [comment.product, comment], method: :delete, class:"btn btn-primary" %>
+        <%= link_to "edit ", edit_product_comment_path(comment.product, comment), class:"btn btn-primary" %></p>
+        </li>
+        <% end %>
+    <% end %>
+  <% end %>
+<%= render 'comments/form'%>
+</ul>

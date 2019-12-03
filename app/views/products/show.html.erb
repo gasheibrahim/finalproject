@@ -39,7 +39,8 @@
               data-label="Buy Now"
               data-locale="auto"></script>
     <% end %>
-    <%= button_to 'Add to cart', lineitems_path(product_id: @product), class:'btn btn-primary' %>
+    <%= button_to 'Add to cart', lineitems_path(product_id: @product), class:'btn btn-primary' %><br><br>
+    <%= render 'comments/comment' %>
   </div>
 </div>
 </div>
