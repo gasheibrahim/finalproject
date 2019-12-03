@@ -28,7 +28,7 @@
       <% end %>
       <% if current_user.try(:admin?) %>
       <li class="nav-item">
-        <%= link_to "Administration", rails_admin_path %>
+        <%= link_to "Administration", rails_admin_path, class:"nav-link", style:"color:white;" %>
       </li>
       <% end %>
       <% if logged_in? %>

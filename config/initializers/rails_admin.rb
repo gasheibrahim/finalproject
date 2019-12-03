@@ -10,13 +10,13 @@ RailsAdmin.config do |config|
         alert: "You are not permitted to view this page"
       )
     end
+    I18n.default_locale = :ja
+    I18n.locale = params[:locale] || I18n.default_locale
   end
   ## == Devise ==
-   config.authenticate_with do
-     warden.authenticate! scope: :user
-     I18n.default_locale = :ja
-     I18n.locale = params[:locale] || I18n.default_locale
-   end
+  # config.authenticate_with do
+  #   warden.authenticate! scope: :user
+  # end
   # config.current_user_method(&:current_user)
 
   ## == CancanCan ==
