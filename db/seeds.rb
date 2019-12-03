@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.create!(
- fullname: "ibrahim",
- email: "ibrahim@gmail.com",
+ fullname: "brabra",
+ email: "brabra@gmail.com",
  phonenumber: "0789859109",
  admin: "true",
  password: "12345678",
@@ -15,8 +15,8 @@ User.create!(
  #watched_on: 5.days.ago
 )
 User.create!(
- fullname: "gashema",
- email: "gashema@gmail.com",
+ fullname: "hahaha",
+ email: "hahaha@gmail.com",
  phonenumber: "078845948",
  admin: "true",
  password: "1234567890",
@@ -24,8 +24,8 @@ User.create!(
  #watched_on: 5.days.ago
 )
 User.create!(
- fullname: "kamikazi",
- email: "kamikazi@gmail.com",
+ fullname: "fafafa",
+ email: "fafafa@gmail.com",
  phonenumber: "0784434343",
  admin: "true",
  password: "kamikazi",
@@ -33,8 +33,8 @@ User.create!(
  #watched_on: 5.days.ago
 )
 User.create!(
- fullname: "jimmy",
- email: "gashemajimmy@gmail.com",
+ fullname: "papapa",
+ email: "papapa@gmail.com",
  phonenumber: "078845948",
  admin: "true",
  password: "1234567890",
@@ -42,8 +42,8 @@ User.create!(
  #watched_on: 5.days.ago
 )
 User.create!(
- fullname: "gatete",
- email: "gatete@gmail.com",
+ fullname: "jujuju",
+ email: "jujuju@gmail.com",
  phonenumber: "078845948",
  admin: "true",
  password: "1234567890",
@@ -177,8 +177,8 @@ User.create!(
  #watched_on: 5.days.ago
 )
 User.create!(
- fullname: "blaise",
- email: "blaise@gmail.com",
+ fullname: "werrt",
+ email: "werrt@gmail.com",
  phonenumber: "078845948",
  admin: "true",
  password: "1234567890",
