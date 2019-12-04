@@ -3,13 +3,17 @@ class PaymentsController < ApplicationController
   def index
     @payments = Payment.all
   end
+
   def show
   end
+
   def new
     @payment = Payment.new
   end
+
   def edit
   end
+
   def create
     @payment = Payment.new(payment_params)
     if @payment.save
@@ -18,6 +22,7 @@ class PaymentsController < ApplicationController
       render :new
     end
   end
+
   def update
     if @payment.update(payment_params)
       redirect_to @payment, notice: 'Payment was successfully updated.'
@@ -25,14 +30,17 @@ class PaymentsController < ApplicationController
       render :edit
     end
   end
+
   def destroy
     @payment.destroy
     redirect_to payments_url, notice: 'Payment was successfully destroyed.'
   end
+
   private
     def set_payment
       @payment = Payment.find(params[:id])
     end
+    
     def payment_params
       params.require(:payment).permit(:user_id, :product_id)
     end

@@ -5,13 +5,17 @@ class LineitemsController < ApplicationController
   def index
     @lineitems = Lineitem.all
   end
+
   def show
   end
+
   def new
     @lineitem = Lineitem.new
   end
+
   def edit
   end
+
   def create
     product = Product.find(params[:product_id])
     @lineitem = @cart.add_product(product)
@@ -21,6 +25,7 @@ class LineitemsController < ApplicationController
       render :new
     end
   end
+
   def update
     if @lineitem.update(lineitem_params)
       redirect_to @lineitem, notice: 'Lineitem was successfully updated.'
@@ -28,15 +33,18 @@ class LineitemsController < ApplicationController
       render :edit
     end
   end
+
   def destroy
     @cart = Cart.find(session[:cart_id])
     @lineitem.destroy
     redirect_to cart_path(@cart), notice: 'Lineitem was successfully destroyed.'
   end
+
   private
     def set_lineitem
       @lineitem = Lineitem.find(params[:id])
     end
+    
     def lineitem_params
       params.require(:lineitem).permit(:product_id)
     end
