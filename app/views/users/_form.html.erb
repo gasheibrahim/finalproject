@@ -1,56 +1,55 @@
 <%= form_with(model: user, local: true) do |form| %>
-   <% if user.errors.any? %>
-     <div id="error_explanation">
-       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-       <ul>
-       <% user.errors.full_messages.each do |message| %>
-         <li><%= message %></li>
-       <% end %>
-       </ul>
-     </div>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+    <% user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+    </div>
 <% end %>
 <section class="testimonial py-5" id="testimonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 py-5 text-white text-center" style="background-color: #1b2a49;">
-                <div class=" ">
-                    <div class="card-body">
-                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
-                        <h2 class="py-3">Registration</h2>
-                        <p>Please Enter Your Details In Order To Shop On Our Shop, Enjoy!!!!!!
-                      </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 py-5 border" style="background-color: #00909e;border-radius: 2rem;">
-                <h4 class="pb-4">Please fill with your details</h4>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                          <%= form.text_field :fullname, class:"form-control", placeholder:"Full Name" %>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <%= form.text_field :email, class:"form-control", placeholder:"Enter Your Email" %>
-                        </div>
-                      </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <%= form.text_field :phonenumber, class:"form-control", placeholder:"Enter Your Phone Number" %>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <%= form.password_field :password, class:"form-control", placeholder:"Enter Password" %>
-                        </div>
-                        <div class="form-group col-md-12">
-                            <%= form.password_field :password_confirmation, class:"form-control", placeholder:"Enter Password_confirmation" %>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <%= form.submit class:"btn btn-primary" %>
-                    </div>
-                </form>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 py-5 text-white text-center" style="background-color: #1b2a49;">
+        <div class=" ">
+          <div class="card-body">
+            <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+            <h2 class="py-3">Registration</h2>
+            <p>Please Enter Your Details In Order To Shop On Our Shop, Enjoy!!!!!!
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="col-md-8 py-5 border" style="background-color: #00909e;border-radius: 2rem;">
+        <h4 class="pb-4">Please fill with your details</h4>
+        <form>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= form.text_field :fullname, class:"form-control", placeholder:"Full Name" %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= form.text_field :email, class:"form-control", placeholder:"Enter Your Email" %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <%= form.text_field :phonenumber, class:"form-control", placeholder:"Enter Your Phone Number" %>
+            </div>
+            <div class="form-group col-md-6">
+              <%= form.password_field :password, class:"form-control", placeholder:"Enter Password" %>
+            </div>
+            <div class="form-group col-md-12">
+              <%= form.password_field :password_confirmation, class:"form-control", placeholder:"Enter Password_confirmation" %>
+            </div>
+          </div>
+          <div class="form-row">
+            <%= form.submit class:"btn btn-primary" %>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </section>
 <% end %>

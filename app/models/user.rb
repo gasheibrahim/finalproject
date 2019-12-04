@@ -9,14 +9,13 @@ class User < ApplicationRecord
   validates :phonenumber, presence: true
   validates :password_digest, presence: true
   def follow!(other_user)
-  active_relationships.create!(followed_id: other_user.id)
-	end
-
+  	active_relationships.create!(followed_id: other_user.id)
+  end
 	#Check whether you are following
-	def following?(other_user)
-	  active_relationships.find_by(followed_id: other_user.id)
-	end
-	def unfollow!(other_user)
-	  active_relationships.find_by(followed_id: other_user.id).destroy
-	end
+  def following?(other_user)
+	 active_relationships.find_by(followed_id: other_user.id)
+  end
+  def unfollow!(other_user)
+	active_relationships.find_by(followed_id: other_user.id).destroy
+  end
 end

@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="products.css">
-
 <div class="card" style="background-color: #c9d1d3;">
 <p id="notice"><%= notice %></p>
 <div class="card-body">
@@ -107,8 +106,8 @@
   <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-<h3 style="text-align: center;">New Product</h3>
-<!-- <table>
+<h3 style="text-align: center;">All products</h3>
+<!--  <table>
   <thead>
     <tr>
       <th>Product name</th>
@@ -136,26 +135,44 @@
       </tr>
     <% end %>
   </tbody>
-</table>
-<%= link_to 'New Product', new_product_path %> -->
+</table> -->
 <br>
+<div class="container-fluid">
+    <div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+        <%= image_tag product.image.url %>
+      <div class="portfolio_images_overlay text-center">
+          <h6 class="clrd-font"><%= product.product_name %></h6>
+            <p class="clrd-font product_price"> <i class="fa fa-usd clrd-font" aria-hidden="true"></i><%= product.product_price %></p>
+          <% if logged_in? %>
+            <%= link_to 'Buy', product, class:"btn btn-primary" %><br><br>
+            <% else %>
+            <%= link_to 'LogIn First', new_user_path, class:"btn btn-primary" %><br><br>
+          <% end %>
+      </div>
+    </div>
+  <% end %>
+  </div><br><br>
+</div>
+<h3 style="text-align: center;">Favorite products</h3>
   <div class="container-fluid">
     <div class="row">
-          <% @products.each do |product| %>
-          <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
-              <%= image_tag product.image.url %>
-              <div class="portfolio_images_overlay text-center">
-                <h6 class="clrd-font"><%= product.product_name %></h6>
-                <p class="clrd-font product_price"> <i class="fa fa-usd clrd-font" aria-hidden="true"></i><%= product.product_price %></p>
-                <% if logged_in? %>
-                <%= link_to 'Buy', product, class:"btn btn-primary" %><br><br>
-                <% else %>
-                <%= link_to 'LogIn First', new_user_path, class:"btn btn-primary" %><br><br>
-                <% end %>
-              </div>
-          </div>
-          <% end %>
-    </div><br><br>
+      <% Product.last(2).each do |product| %>
+      <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+        <%= image_tag product.image.url %>
+      <div class="portfolio_images_overlay text-center">
+      <h6 class="clrd-font"><%= product.product_name %></h6>
+      <p class="clrd-font product_price"> <i class="fa fa-usd clrd-font" aria-hidden="true"></i><%= product.product_price %></p>
+      <% if logged_in? %>
+        <%= link_to 'Buy', product, class:"btn btn-primary" %><br><br>
+      <% else %>
+        <%= link_to 'LogIn First', new_user_path, class:"btn btn-primary" %><br><br>
+      <% end %>
+    </div>
+    </div>
+      <% end %>
+  </div><br><br>
     <%= paginate @products %>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -2,7 +2,6 @@
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
       <ul>
       <% product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,38 +9,31 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= form.label :product_name %>
     <%= form.text_field :product_name %>
   </div>
-
   <div class="field">
     <%= form.label :image %><br>
     <%= image_tag(@product.image.url, class:"imageupload" ) if @product.image && @product.image.url %>
     <%= form.file_field :image %>
     <%= form.hidden_field :image_cache %>
   </div>
-
   <div class="field">
     <%= form.label :product_details %>
     <%= form.text_area :product_details %>
   </div>
-
   <div class="field">
     <%= form.label :product_price %>
     <%= form.number_field :product_price %>
   </div>
-
   <div class="field">
     <%= form.label :product_category %>
     <%= form.text_field :product_category %>
   </div>
-
   <div class="field">
     <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
